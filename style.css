@@ -329,7 +329,6 @@ footer h3{
 }
 
 video {
-    max-width: 100%; 
     max-height: 100%; 
 }
 
@@ -433,10 +432,6 @@ video {
 #homo-concept{
     width: 35em;
 }
-#video-movie{
-    background-color: #85C1CF; 
-}
-
 .text_me{
     font-size: 45px;
     font-weight: 100;
@@ -468,5 +463,3 @@ tr:last-child th, tr:last-child td {
 tr + tr th, tr + tr td {
     border-top: 2px solid black;
 }
-
-  
