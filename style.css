@@ -1,0 +1,472 @@
+@font-face {
+    font-family: 'Tenor Sans';
+    src: url('fonts/tenor_sans/demo.html') format('woff2'),
+        url('fonts/tenor_sans/TenorSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/work_sans/WorkSans-Regular.woff2') format('woff2'),
+        url('fonts/work_sans/WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* body */
+body{
+    margin: 0;
+    font-family: "Work Sans";
+    transition: 0.3s all;
+    background-color: #798591;
+    color: #231F20;
+}
+.darkBlue{
+    background-color: #798591;
+}
+.whiteOff{
+    background-color: #FAF9F6;
+}
+.darkGreen{
+    background-color: #C6C5AE;
+}
+.beige{
+    background-color: #E3D6C9;
+}
+a{
+    color: #231F20;
+    text-decoration: none;
+} 
+.project{
+    margin: 0;
+    font-family: "Work Sans";
+    transition: 0.3s all;
+    background-color: #FAF9F6;
+    color: #231F20;
+}
+.beige-body{
+background-color: #E3D6C9;
+}
+/*header*/
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3em;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+.nav a:hover{
+    color: #565a5f;
+}
+/*main*/
+main{
+    margin: 3em;
+}
+section {
+    height: 100vh;
+}
+
+    /*section 1*/
+    .content_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .content_section h1{
+        margin: 0;
+        margin-top: 0.2em;
+        font-size: 12em;
+        text-transform: uppercase;
+        font-family: 'Tenor Sans';
+        font-weight: 100;
+        text-align: right;
+    }
+    .content_section h3{
+        margin: 0;
+        margin-top: 0.2em;
+        font-size: 3em;
+        text-transform: uppercase;
+        font-family: 'Tenor Sans';
+        font-weight: 100;
+        text-align: right;
+    }
+    .svg-container {
+        position: absolute;
+        top: 26em;
+        left: 32em;
+        animation: move 15s linear infinite; /* Adjust duration as needed */
+    }
+    /* section 2 */ 
+        /*see more option*/
+    
+        .all_section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: #231F20 1px solid;
+        }
+        .all_section a,
+        .all_section p{
+            font-size: 1.5em;
+        }
+        .more{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.8em;
+            color: #231F20;
+        }
+        .more svg{
+            margin-top: 0.2em;
+        }
+        .more:hover{
+            -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+
+        }
+          
+        /* image conatiner for projects */
+        .projects{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+        }
+        .one_project{
+            width: 45em; /* Set the width of the container */
+            height: 45em; /* Set the height of the container */
+            position: relative; /* Position the image and text relative to the container */
+            overflow: hidden; /* Hide any overflow content */
+            z-index: 0;
+        }
+        .one_project .image {
+            width: 70%;
+            height: 70%;
+            margin: 5.8em;
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+        .one_project:hover .image{
+            transform: scale(1.5);
+        }
+        .one_project .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container */
+        }
+        .one_project .title_project{
+            position: relative;
+            left: 1em;
+            bottom: 3em;
+            color: black; /* Set text color */
+            z-index: 1;
+            font-family: "Tenor sans";
+            font-size: 2em;
+
+
+        }
+        .one_project:hover .title_project{
+            color: white; /* Set text color */
+        }
+        .one_project .skill_project{
+            position: relative;
+            left: 2em;
+            bottom: 6em;
+            color: black; /* Set text color */
+            z-index: 1;
+            border-radius: 2em;
+            border: #231F20 0.1em solid ;
+            width: auto;
+            padding: 5px;
+            text-align: center;
+        }
+        .one_project:hover .skill_project{
+            color: white; /* Set text color */
+            border-color: white;
+        }
+        .skill_project_all{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        }
+    /*section 3*/
+    .skills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .skills p{
+        text-transform: uppercase;
+        font-size: 10em;
+        font-family: "Tenor sans";
+        margin: 0;
+    }
+    .skill-image-display {
+        position: absolute;
+        width: 350px; 
+        height: 350px; 
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.5s ease-in-out;
+        display: none; 
+    }
+    /*sectiojn 4*/
+    .about{
+        position: relative;
+        text-align: center; 
+        margin-top: 8em;
+    }
+    .about img{
+        position: relative;
+        width: 25em;
+        z-index: 1;
+    }
+
+    .text_move{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    marquee{
+        position: absolute;
+        bottom: 1em;
+        left: 0;
+        text-transform: uppercase;
+        font-family: "Tenor sans";
+        font-size: 11em;
+        margin: 0;
+        z-index: 0;
+        width: 100%;
+    }
+    
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #231F20;
+    margin: 0;
+    color: #E3D6C9;
+    font-family: 'Work Sans';
+}
+footer a{
+    color: #E3D6C9;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+footer a:hover{
+    color: #8b8278;
+}
+.top_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 1em 3em 0 3em;
+}
+.bottom_footer{
+    display: flex;
+    flex-direction: row;
+    margin: 1em 3em 1em 3em;
+    align-items: flex-end;
+}
+footer svg{
+    margin-bottom: 2.3em;
+}
+.foot_contents{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+footer h1{
+    text-transform: uppercase;
+    font-size: 10em;
+    font-family: 'Tenor Sans';
+    font-weight: 100;
+    color: #E3D6C9;
+    margin: 0;
+}
+.foot_navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.7em;
+}
+footer h3{
+    font-size: 1.8em;
+}
+/*project page*/
+
+.name{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10em;
+    font-family: 'Tenor Sans';
+}
+.video-container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.video {
+    width: 70%; 
+    height: 600px; 
+    background-color: #A5A5C7; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#video-triangolos{
+    background-color: #FAF9F6;
+}
+
+video {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+.concept-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.2em;
+    gap: 25em;
+}
+.concept-description{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    justify-content: flex-start;
+}
+.concept-role{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+    gap: 1em;
+}
+.name p{
+    margin: 0;
+}
+.project-heading{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.concept-description p{
+    font-size: 0.9em;
+}
+.concept-more p{
+    margin: 0 ;
+}
+.link{
+    color: #559de5;
+}
+#decipal-purple{
+    width: 30em;
+    height: 30em;
+}
+.vertical-image{
+    width: 60em;
+    margin-left: 8em;
+    margin-top: 2em;
+}
+.name-project{
+    display: flex;
+    justify-content: center;
+    font-size: 18em;
+    font-family: 'Tenor Sans';
+}
+.name-project p{
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.one_project-long{
+    width: 90em; /* Set the width of the container */
+    height: 50em; /* Set the height of the container */
+    position: relative; /* Position the image and text relative to the container */
+    overflow: hidden; /* Hide any overflow content */
+    z-index: 0;
+}
+.one_project-long .image {
+    width: 70%;
+    height: 70%;
+    margin: 5.8em;
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+.one_project-long:hover .image{
+    transform: scale(1.5);
+}
+.one_project-long .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+.one_project-long .title_project{
+    position: relative;
+    left: 1em;
+    bottom: 3em;
+    color: black; /* Set text color */
+    z-index: 1;
+    font-family: "Tenor sans";
+    font-size: 2em;
+}
+.one_project-long .skill_project{
+    position: relative;
+    left: 2em;
+    bottom: 6em;
+    color: black; /* Set text color */
+    z-index: 1;
+    border-radius: 2em;
+    border: #231F20 0.1em solid ;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+}
+#homo-concept{
+    width: 35em;
+}
+#video-movie{
+    background-color: #85C1CF; 
+}
+
+.text_me{
+    font-size: 45px;
+    font-weight: 100;
+    color: #0c0c0c;
+    padding: 200px 200px;
+    transition: opacity 0.5s ease-in;
+}
+.table-div{
+    display: flex;
+    justify-content: center;
+}
+table {
+    width: 80%;
+    border-collapse: collapse; /* Ensures borders between cells are merged */
+}
+th, td {
+    padding: 8px;
+    text-align: left; /* Aligns text to the left */
+}
+/* Applies a larger font size to the first row headers */
+th {
+    font-size: 1.5em; /* Larger font size */
+}
+/* Applies bottom border to the last row of the table */
+tr:last-child th, tr:last-child td {
+    border-bottom: 2px solid black;
+}
+/* Applies top border to all rows except the first one */
+tr + tr th, tr + tr td {
+    border-top: 2px solid black;
+}
+
+  
