@@ -67,9 +67,9 @@ header{
 /*main*/
 main{
     margin: 3em;
-}
-section {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
 }
 
     /*section 1*/
@@ -463,3 +463,5 @@ tr:last-child th, tr:last-child td {
 tr + tr th, tr + tr td {
     border-top: 2px solid black;
 }
+
+
